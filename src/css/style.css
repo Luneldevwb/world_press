@@ -1,0 +1,352 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.promo {
+    height: 800px;
+    background: url(../img/bg/main.jpg) center center/cover no-repeat;
+    padding: 39px 0 62px 0;
+}
+
+.logo .logo_img {
+    display: block;
+    margin: 0 auto;
+}
+
+.logo .logo_text {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 10px;
+}
+
+h1 {
+    margin-top: 53px;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+.title {
+   font-size: 41px;
+   font-weight: 900;
+   color: rgb(249, 191, 59);
+   text-transform: uppercase;
+   line-height: 24px;
+   text-align: center;   
+}
+
+.simple .title_big {
+    font-weight: 900;
+    font-size: 80px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 21px;
+}
+
+.promo .promo_text {
+    font-size: 21px;
+    line-height: 28px;
+    font-weight: 300;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 23px;
+    padding: 0 13px;
+} 
+
+.promo .promo_text span {
+    font-weight: 700;
+    color: #f9bf3b;
+
+}
+
+.promo .promo_btn, .gift_button  {
+    display: block;
+    width: 313px;
+    height: 72px;
+    background-image: linear-gradient(0.0deg, #2798b9 0%, #3ab6da 100%);
+    border: 1px solid rgba(0,0,0,0.22);
+    box-shadow: inset 0px 0px 0px 0px rgba(7, 6, 6, 0.17);
+    margin: 0px auto;
+    margin-top: 73px;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-shadow: -1px -1px 0px rgba(0,0,0,0.21);
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.more {
+    margin-top: 73px;
+}
+
+.more .more_text {
+    font-size: 15px;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+}
+
+.more .more_img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 13px;
+}
+
+.waiting {
+    min-height: 604px;
+    background-color: #efefef;  
+    padding: 85px 0 75px 0;
+}
+
+.waiting .waiting_head, .finish_head {
+    font-size: 30px;
+    line-height: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #252525;
+    text-align: center;
+}
+
+.waiting .waiting_devider, .finish_devider {
+    width: 217px;
+    height: 4px;
+    background-color: #f9bf3b;
+    margin: 0 auto;
+    margin-top: 18px;
+}
+
+.waiting .waiting_subhead {
+    font-size: 23px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #4a4a4a;
+    text-align: center;
+    margin-top: 17px;
+}
+
+.waiting .waiting_wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 45px;
+}
+
+.waiting .waiting_wrapper .waiting_item {
+    width: 342px;
+    text-align: center;
+    align-content: space-between;
+}
+
+.waiting .waiting_wrapper .waiting_item .waiting_img {
+    width: 100%;
+}
+
+.waiting .waiting_wrapper .waiting_item .waiting_descr {
+    font-size: 15px;
+    line-height: 21px;
+    font-weight: 300;
+    color: #4a4a4a;
+    margin-top: 33px;
+}
+
+.optimisation {
+    min-height: 550px;
+    padding: 102px 0 107px 0;
+}
+
+.optimisation .optimisation_header {
+    margin-left: 391px;
+    font-size: 29px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #299cbd;
+}
+
+.optimisation .optimisation_text {
+    margin-top: 25px;
+    margin-left: 391px;
+    font-size: 17px;
+    font-weight: 300;
+    color: #4a4a4a;
+}
+
+.optimisation .optimisation_text span {
+    font-size: 17px;
+    line-height: 27px;
+    font-weight: 700;
+    color: #4a4a4a;
+}
+
+.optimisation .optimisation_img {
+    position: absolute;
+    top: -48px;
+    left: -240px;
+    z-index: -1;
+}
+
+.finish {
+    min-height: 447px;
+    padding: 86px 0 79px 0;
+    background: url('/img/bg/bg_centre.png') center center/cover no-repeat;
+}
+
+.finish .finish_head {
+    color:  #252525;;
+}
+
+.finish .finish_devider {
+    margin-top: 23px;
+}
+
+.finish .finish-wrapper {
+    margin-top: 41px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.finish .finish-wrapper .finish-item {
+    width: 204px;
+} 
+
+.finish .finish-wrapper .finish-item .finish-round {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+    width: 115px;
+    height: 115px;
+    background-color: #b4e2ff;
+    border-radius: 100%;
+    padding: 30px 0 30px 0;
+}
+
+.finish .finish-wrapper .finish-item .finish-descr {
+    text-align: center;
+    font-size: 17px;
+    font-weight: 300;
+    color: #252525;
+    margin-top: 25px;
+}
+
+.gift {
+    min-height: 628px;
+    background-color: #efefef;
+    padding: 86px 0 83px 0 ;
+}
+
+.gift .gift_descr {
+    text-align: center;
+    margin-top: 42px;
+    font-size: 30px;
+    font-weight: 400;
+    color: #252525;
+}
+.gift_button {
+    margin-top: 48px;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0.17);
+}
+
+.gift .gift_for {
+    display: block;
+    margin: 0 auto;
+}
+
+.first_webinar {
+    padding: 89px 0 64px 0;
+}
+
+.first_webinar .webinar_img {
+    display: block;
+    margin: 0 auto;
+}
+
+.first_webinar .webinar_text {
+    margin-top: 37px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #252525;
+}
+
+.first_webinar .webinar_date {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #299cbd;
+}
+
+.first_webinar .webinar_descr {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 23px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #4a4a4a;
+}
+
+.contact {
+    padding: 61px 0 69px 0;
+    min-height: 166px;
+    background-color: #1a1a1a;
+    text-align: center;
+}
+
+.contact .contact_secur {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+    text-decoration: underline;
+    color: #888888;
+}
+
+.contact .contact_confidential {
+    font-size: 15px;
+    font-weight: 300;
+    text-decoration: underline;
+    color: #888888;
+}
+
+.contact .contact_bar {
+    font-size: 15px;
+    font-weight: 300;
+    text-decoration: none;
+    color: #888888;
+}
+
+.contact .contact_phone {
+    font-size: 15px;
+    line-height: 21px;
+    font-weight: 300;
+    text-decoration: none;
+    color: #888888;
+}
+
+.contact .contact_link {
+    text-decoration: none;
+}
