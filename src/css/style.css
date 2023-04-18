@@ -11,13 +11,13 @@ html {
 
 .container {
     position: relative;
-    width: 1140px;
+    max-width: 1140px;
     margin: 0 auto;
 }
 
 .promo {
     height: 800px;
-    background: url(../img/bg/main.jpg) center center/cover no-repeat;
+    background: url('../img/bg/main.jpg') center center/cover no-repeat;
     padding: 39px 0 62px 0;
 }
 
@@ -38,6 +38,7 @@ html {
 
 h1 {
     margin-top: 53px;
+    margin-bottom: 0;
 }
 
 h2 {
@@ -78,7 +79,7 @@ h2 {
 
 }
 
-.promo .promo_btn, .gift_button  {
+.promo .promo_btn, .gift_button, .registration_btn  {
     display: block;
     width: 313px;
     height: 72px;
@@ -95,6 +96,13 @@ h2 {
     color: #ffffff;
     cursor: pointer;
     border-radius: 4px;
+}
+.promo .promo_btn:hover, .gift_button:hover , .registration_btn:hover {
+    background: #448f8f;
+}
+
+.registration_btn {
+    margin-top: 26px;
 }
 
 .more {
@@ -185,8 +193,10 @@ h2 {
 }
 
 .optimisation .optimisation_text {
+    width: 750px;
+    position: absolute;
+    right: -7px;
     margin-top: 25px;
-    margin-left: 391px;
     font-size: 17px;
     font-weight: 300;
     color: #4a4a4a;
@@ -201,7 +211,7 @@ h2 {
 
 .optimisation .optimisation_img {
     position: absolute;
-    top: -48px;
+    top: -84px;
     left: -240px;
     z-index: -1;
 }
@@ -209,11 +219,11 @@ h2 {
 .finish {
     min-height: 447px;
     padding: 86px 0 79px 0;
-    background: url('/img/bg/bg_centre.png') center center/cover no-repeat;
+    background: url('../img/bg/bg_centre.png') center center/cover no-repeat;
 }
 
 .finish .finish_head {
-    color:  #252525;;
+    color:  #fff;
 }
 
 .finish .finish_devider {
@@ -246,7 +256,7 @@ h2 {
     text-align: center;
     font-size: 17px;
     font-weight: 300;
-    color: #252525;
+    color: #fff;
     margin-top: 25px;
 }
 
@@ -349,4 +359,396 @@ h2 {
 
 .contact .contact_link {
     text-decoration: none;
+}
+
+.policy  {
+    padding: 30px 20px;
+}
+.policy .policy__container {
+    max-width: 1140px;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 30px;
+}
+.policy .policy__container .title {
+    color: #000;
+    line-height: 46px;
+}
+.policy .policy__container .subtitle {
+    margin: 15px 0 15px 0;
+    font-size: 20px;
+    line-height: 21px;
+    font-weight: 700;
+}
+
+ /* modal window  */
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.56);
+    top: 0;
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    min-height: 400px;
+    background: #F2F2F2;
+    padding: 34px 39px 39px 39px;
+    border-radius: 4px;
+}
+.overlay .modal .modal__close  {
+    position: absolute;
+    top: 0;
+    right: -40px;
+    font-size: 41px;
+    line-height: 14px;
+    color: #c70101;
+    cursor: pointer;
+}
+.overlay .modal .modal__subtitle {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    color: #0D0D0D;
+}
+.overlay .modal .modal__descr {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    color: #0D0D0D;
+    margin-top: 10px;
+}
+.overlay .modal_mini {
+    min-height: 143px;
+}
+.feed-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 36px;
+    width: 303px;
+}
+.feed-form input {
+    height: 53px;
+    background: #ffffff;
+    border-radius: 5px;
+    margin-bottom: 14px;
+    border: none;
+    padding: 0 20px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #4B4B4B;
+}
+.feed-form input:nth-child(3) {
+    margin-bottom: 19px;
+}
+.overlay .modal input.error{
+    border: 1px solid red;
+}
+.overlay .modal label.error {
+    border: none;
+    text-align: center;
+    margin-bottom: 15px;
+}
+#registration, #thanks {
+    display: none;
+}
+.pageup {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+}
+.pageup img {
+    width: 100%;
+}
+
+/* Media query */
+
+@media(max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+    .simple .title_big {
+        font-size: 65px;
+    }
+    .waiting .waiting_wrapper .waiting_item {
+        width: 300px;
+    }
+    .optimisation .optimisation_text {
+        position: absolute;
+        line-height: 18px;
+        width: 658px;
+        right: -30px;
+        width: 658px;
+        font-size: 16px;
+        padding-right: 16px;
+    }
+    .optimisation .optimisation_text span {
+        font-size: 16px;
+        line-height: 21px;
+    }
+    .optimisation .optimisation_img {
+        left: -191px;
+        top: -84px;
+    }
+
+}
+
+@media(max-width: 992px) {
+    .container {
+        max-width: 720px;
+        
+    }
+    .title {
+        font-size: 30px;
+    }
+    .simple .title_big {
+        font-size: 50px;
+    }
+    .waiting {
+        min-height: 450px;
+        padding: 50px 0 45px 0;
+    }
+    .waiting .waiting_wrapper .waiting_item {
+        width: 225px;
+    }
+    .optimisation {
+        min-height: 460px;
+        padding: 50px 0 45px 0;
+    }
+    .optimisation .optimisation_header {
+        margin-left: 0;
+    }
+    .optimisation .optimisation_text {
+        width: 100%;
+        right: unset;
+        line-height: 20px;
+    }
+    .optimisation .optimisation_img {
+        display: none;
+    }
+    .finish {
+        min-height: 447px;
+        padding: 50px 0 55px 0;
+    }
+    .gift {
+        min-height: 560px;
+        padding: 50px 0 0px 0;
+    }
+    .gift .gift_descr {
+        font-size: 20px;
+        line-height: 27px;
+    }
+    .first_webinar {
+        padding: 50px 0 45px 0;
+    }
+    .first_webinar .webinar_date {
+        font-size: 32px;
+    }
+
+}
+@media(max-width: 768px) {
+    .container {
+        max-width: 540px;
+        
+    }
+    .title {
+        font-size: 24px;
+    }
+    h1 {
+        margin-top: 38px;
+    }
+    .simple .title_big {
+        font-size: 35px;
+    }
+    .promo .promo_text {
+        font-size: 18px;
+    }
+    .waiting .waiting_head, .finish_head {
+        font-size: 24px;
+    }
+    .waiting .waiting_subhead {
+        font-size: 20px;
+    }
+    .waiting .waiting_wrapper .waiting_item {
+        width: 172px;
+    }
+    .waiting .waiting_wrapper .waiting_item .waiting_descr {
+        font-size: 12px;
+        line-height: 16px;
+        margin-top: 20px;
+    }
+    .optimisation {
+        padding: 20px 0 45px 0;
+    }
+    .optimisation .optimisation_header {
+        font-size: 24px;
+    }
+    .optimisation .optimisation_text {
+        line-height: 18px;
+        font-size: 13px;
+    }
+    .optimisation .optimisation_text span {
+        font-size: 14px;
+        line-height: 21px;
+    }
+    .finish {
+        min-height: 380px;
+        padding: 30px 0 33px 0;
+    }
+    .finish .finish-wrapper .finish-item .finish-round {
+        height: 100px;
+        width: 100px;
+    }
+    .finish .finish-wrapper .finish-item .finish-descr {
+        font-size: 13px;
+    }
+    .gift .gift_descr {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+
+}
+@media(max-width: 576px) {
+    .container {
+        max-width: 100%;
+        padding-right: 10px;
+        padding-left: 10px;
+        margin-right: auto;
+        margin-left: auto;
+        
+    }
+    .title {
+        font-size: 24px;
+    }
+    .simple .title_big {
+        font-size: 30px;
+    }
+    .promo .promo_text {
+        font-size: 16px;
+        line-height: 18px;
+    }
+    .promo .promo_btn, .gift_button {
+        width: 300px;
+    }
+    .waiting {
+        padding-top: 25px;
+    }
+    .waiting .waiting_head, .finish_head {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .waiting .waiting_subhead {
+        font-size: 16px;
+    }
+    .waiting .waiting_wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .waiting .waiting_wrapper .waiting_item {
+        width: 215px;
+        margin-top: 15px;
+    }
+    .waiting .waiting_wrapper .waiting_item:first-child {
+        margin-top: 0;
+    }
+    .waiting .waiting_wrapper .waiting_item .waiting_descr {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .optimisation {
+        padding: 20px 10px 45px 10px;
+    }
+    .optimisation .optimisation_header {
+        font-size: 20px;
+    }
+    .optimisation .optimisation_header {
+        margin-top: 15px;
+    }
+    .optimisation .optimisation_text {
+        line-height: 13px;
+        font-size: 13px;
+        right: 0;
+        margin-top: 10px;
+    }
+    .optimisation .optimisation_text span {
+        line-height: 13px;
+    }
+    .finish {
+        padding: 20px 0 33px 0;
+    }
+    .finish .finish-wrapper {
+        flex-direction: column;
+        margin-top: 30px;
+        align-items: center;
+    }
+    .finish .finish-wrapper .finish-item .finish-descr {
+        font-size: 13px;
+    }
+    .finish .finish-wrapper .finish-item {
+        margin-top: 10px;
+    }
+    .finish .finish-wrapper .finish-item:first-child {
+        margin-top: 0px;
+    }
+    .gift .gift_descr {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .first_webinar .webinar_img {
+        width: 300px;
+    }
+    .first_webinar .webinar_text {
+        font-size: 26px;
+    }
+    .first_webinar .webinar_date {
+        font-size: 24px;
+    }
+    .modal {
+        width: 300px;
+        padding: 34px 10px 30px 10px;
+    }
+    .overlay .modal .feed-form {
+        width: 279px;
+    }
+    .overlay .modal .feed-form .registration_btn {
+        width: 100%;
+    }
+    .overlay .modal .modal__close {
+        top: 8px;
+        right: 10px;
+    }
+    .policy .policy__container {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .policy .policy__container .title {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .policy .policy__container .subtitle {
+       font-size: 16px;
+       line-height: 18px;
+    }
+    .more {
+        margin-top: 40px;
+    }
+    .pageup {
+        right: 10px;
+    }
+    .promo .promo_btn:hover, .gift_button:hover, .registration_btn:hover {
+        background-image: linear-gradient(0.0deg, #2798b9 0%, #3ab6da 100%);
+    }
+
 }
