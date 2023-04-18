@@ -6,16 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wordpress интенсив</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <section class="promo">
+    <section id="up" class="promo">
         <div class="container">
             <div class="logo">
-                <img src="icons/finish/logo.png" alt="logo_wordpress" class="logo_img">
+               <a href="#"><img src="icons/finish/logo.png" alt="logo_wordpress" class="logo_img"></a> 
                 <div class="logo_text">WORDPRESS ИНТЕНСИВ</div>
             </div>
 
@@ -30,7 +29,7 @@
                     Ежедневно в России появляется более 5 000 новых сайтов.<br>
                     И только единицы из них становятся популярными и приносят ощутимую прибыль. В чем секрет? В чем формула успеха? Узнайте на предстоящем двухдневном <span>БЕСПЛАТНОМ</span> интенсиве!
                 </div>
-                <button class="promo_btn">Записаться на интенсив!</button>
+                <button data-modal="registration" class="promo_btn">Записаться на интенсив!</button>
                 <div class="more">
                     <div class="more_text">
                         узнать больше об интенсиве
@@ -41,7 +40,25 @@
         </div>
     </section>
 
-    <section class="waiting">
+    <!-- <section class="consultation">
+        <div class="container">
+            <h2 class="title title_left">
+                Получите бесплатную консультацию <br> с специалистом
+            </h2>
+            <div class="consultation__descr">
+                Просто заполните форму заявки<br> и мы перезвоним вам в течении 10 минут
+            </div>
+            <form id="consultation-form" class="feed-form" action="#">
+                <input name="name" required type="text" placeholder="Ваше имя">
+                <input name="phone" required placeholder="Ваш телефон">
+                <input name="email" required placeholder="Ваш E-mail">
+                <button class="button button_submit">Записаться на интенсив!</button>
+            </form>
+        </div>
+    </section> -->
+
+    <section class="waiting" data-aos="fade-up" data-aos-delay="5s" data-aos-duration="2s"
+                data-aos-easing="ease-in-out" data-aos-offset="200">
         <div class="container">
             <h2 class="waiting_head">
                 Что вас ждет в нашем интенсиве???
@@ -68,7 +85,8 @@
             </div>
         </div>
     </section>   
-    <section class="optimisation">
+    <section class="optimisation" data-aos="fade-up" data-aos-delay="5s" data-aos-duration="2s"
+                data-aos-easing="ease-in-out" data-aos-offset="200">
         <div class="container">
            <h2 class="optimisation_header">
                 Что такое оптимизация и зачем она нужна?
@@ -86,7 +104,8 @@
         </div>
     </section>   
     
-    <section class="finish">
+    <section class="finish" data-aos="fade-up" data-aos-delay="5s" data-aos-duration="2s"
+                data-aos-easing="ease-in-out" data-aos-offset="200">
         <div class="container">
             <h2 class="finish_head">
                 По окончании обучения Вы сможете!
@@ -133,7 +152,8 @@
         </div>
     </section>
 
-    <section class="gift">
+    <section class="gift" data-aos="fade-up" data-aos-delay="5s" data-aos-duration="2s"
+                data-aos-easing="ease-in-out" data-aos-offset="200">
         <div class="container">
             <img src="icons/finish/cadeau.png" alt="gift" class="gift_for">
             <div class="gift_descr">Для всех участников интенсива предусмотрены бонусы и подарки. Нажимайте 
@@ -141,11 +161,12 @@
              на кнопку ниже, принимайте участие в вебинарах и забирайте свой приз по 
             <br>
             окончании обучения!</div>
-            <button class="gift_button">Записаться на интенсив!</button>
+            <button data-modal="registration" class="gift_button">Записаться на интенсив!</button>
         </div>
     </section>
 
-    <section class="first_webinar">
+    <section class="first_webinar" data-aos="fade-up" data-aos-delay="5s" data-aos-duration="2s"
+                data-aos-easing="ease-in-out" data-aos-offset="200">
         <div class="container">
 
             <img src="icons/conference.png" alt="conference" class="webinar_img">
@@ -159,9 +180,45 @@
     </section>
     <footer class="contact">
         <div class="container">
-            <div ><a href="#" class="contact_link"><span class="contact_secur">Служба поддержки</span> <span class="contact_bar">|</span> <span class="contact_confidential">Политика конфиденциальности</span><br>
-            <span class="contact_phone">Позвоните нам 8-800-555-01-21</span></a></div>
+            <div ><a href="#" class="contact_link"><span class="contact_secur">Служба поддержки</span> <span class="contact_bar">|</span> 
+            <span class="contact_confidential"><a class="contact_secur" href="/src/policy.html">Политика конфиденциальности</a></span>
+            <br>
+            <span class="contact_phone">Позвоните нам 8-800-555-01-21</span></a>
+        </div>
         </div>
     </footer>
+
+    <div class="overlay">
+        <div class="modal" id="registration">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Просто заполните форму заявки</div>
+            <div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
+
+            <form class="feed-form feed-form_mt26" action="#">
+                <input name="name" required minlength="2" type="text" placeholder="Ваше имя">
+                <input name="phone"  required placeholder="Ваш телефон">
+                <input name="email" required type="text" placeholder="Ваш E-mail">
+                <button  class="promo_btn registration_btn">Записаться на интенсив!</button>
+            </form>
+        </div>
+
+        <div class="modal modal_mini" id="thanks">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Спасибо за вашу заявку!</div>
+            <div class="modal__descr">Наш менеджер свяжется с вами в ближайшее время!</div>
+        </div>
+    </div>
+
+    <a href="#up" class="pageup">
+        <img src="icons/circlechevron-up.svg" alt="circlechevron-up">
+    </a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
